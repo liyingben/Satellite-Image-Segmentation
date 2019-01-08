@@ -5,7 +5,10 @@ DISCLAIMER:
     The pytorch model is not fully tested yet. The data pre-processing is done and tested.
 
 OVERVIEW OF THE PROJECT:
-    The challenge of this project is to predict each pixel of the image rather than just a category label.
+    Image Segementation : The challenge of this project is to predict each pixel of the image rather than just a category label.
+    The project focusses on improvement on satellite image mapping and monitoring. Authorities map water bodies / forest manually (human annotators), which takes a substantial amount of time. We could automate this and used a deep learning approach to segment and map individual water bodies / forest areas from satellite imagery. In addition, we can code to perform change detection and monitor the land change over time. These change detection is an important task and analysing increase/decrease of an area can provide valuable insights.
+    Due to the time constraints I used a kaggle dataset for protoyping the segmentation model. Challenges faced where to convert WKT polygons to image mask and the 16 band and 3 band images into images which can be used for training the model. Here, I am using a U-NET model which is known to improve performace on segmentation tasks due to its unique architecture and also used pretrained VGG11 as its encoder.
+    Future scope of the project would include using images from different point of time and detecting the changes automatically.
 
 ABOUT THE DATA : 
     1km x 1km satellite images in both 3-band and 16-band formats. All images are in GeoTiff format
